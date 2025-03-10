@@ -6,7 +6,7 @@
     <title>TOur Of DOM</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
     </style>
@@ -27,7 +27,7 @@
             <li>rural</li>
         </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits">Fruits I like</h1>
             <ul>
                 <li>apple</li>
@@ -48,23 +48,36 @@
     </main>
     <script src="JS/dom.js"></script>
     <script>
+        // option-1 getElementsByTagName
         const liColection = document.getElementsByTagName('li')
         // console.log(liColection)
         for(const li of liColection){
             console.log(li)
             console.log(li.innerText)
         }
+        
         const allHeadings = document.getElementsByTagName('h1')
         for(const h of allHeadings){
             console.log(h)
             console.log(h.innerText)
         }
+        // option-2 getElementById
         document.getElementById('place-title').innerText = 'change the places title'
+        // option-3 getElementsByClassName
         const place = document.getElementsByClassName('important-places')
         console.log(place)
         for(const p of place){
             console.log(p)
             console.log(p.innerText)
+        }
+        // option-4 querySelector
+        // query selector all
+        // option-5 querySelectorAll
+        const someli = document.querySelectorAll('.fruits-container')
+        console.log(someli)
+        for(const li of someli){
+            console.log(li)
+            console.log(li.innerText)
         }
 
     </script>
