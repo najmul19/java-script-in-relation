@@ -16,16 +16,27 @@
         <h1>Welcome to MY DOM</h1>
     </header>
     <main>
-        <h1>My Ausome DOM</h1>
+        <h1>My Awesome DOM</h1>
         <ul>
             <li>jalal</li>
             <li>kkalal</li>
             <li>malal</li>
+            <li>rural</li>
         </ul>
     </main>
     <script src="JS/dom.js"></script>
     <script>
-        console.log("Inside")
+        const liColection = document.getElementsByTagName('li')
+        // console.log(liColection)
+        for(const li of liColection){
+            console.log(li)
+            console.log(li.innerText)
+        }
+        const allHeadings = document.getElementsByTagName('h1')
+        for(const h of allHeadings){
+            console.log(h)
+            console.log(h.innerText)
+        }
     </script>
 </body>
 </html>
