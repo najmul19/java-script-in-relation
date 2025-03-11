@@ -8,3 +8,10 @@ h1 {
 .important-places{
     color: blueviolet;
 }
+
+.yellow-bg{
+    background-color: yellowgreen !important;
+}
+.large-text{
+    font-size: 2em;
+}
