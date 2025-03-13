@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegate</title>
+</head>
+<body>
+    <h1>Explore Event delegate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Obcaecati, quas officiis.</li>
+            <li class="item">Nulla, ipsa consectetur?</li>
+            <li class="item">Vitae, labore dolorum?</li>
+            <li class="item">Eius, saepe ut.</li>
+            <li class="item">Voluptates, facere aliquid!</li>
+        </ul>
+        <button id="btn-add-item">Add New Item</button>
+    </section>
+    <script>
+        // const item = document.getElementsByClassName('item')
+        // // console.log(item)
+        // for(const i of item){
+        //     // i.addEventListener('click',function(){
+        //     //     console.log(i)
+        //     // })
+        //     // i.addEventListener('click',function(event){
+        //     //     console.log(event.target)
+        //     // })
+        //     // i.addEventListener('click',function(event){
+        //     //     console.log(event.target.parentNode)
+        //     // })
+        //     i.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+        // }
+
+        // delegate event hanbdler to parent
+        document.getElementById('list-container').addEventListener('click',function(event){
+            // console.log(event.target)
+            event.target.parentNode.removeChild(event.target)
+        })
+        // add item into list
+        document.getElementById('btn-add-item').addEventListener('click',function(){
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'New Item'
+            li.classList.add('item');
+            listContainer.appendChild(li)
+        })
+    </script>
+</body>
+</html>
