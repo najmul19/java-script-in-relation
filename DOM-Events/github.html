@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+</head>
+<body>
+    <h1 id="screte-info">My secrete info</h1>
+    <input id="delete-confirm" type="text" placeholder="please type delete">
+    <button id="btn-delte" disabled>Delete</button>
+    <script>
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            const text = event.target.value;
+            const deletBtn = document.getElementById('btn-delte');
+
+            console.log(text)
+            if(text=='delete'){
+                deletBtn.removeAttribute('disabled')
+            } else{
+                deletBtn.setAttribute('disabled',true)
+            }
+        })
+        document.getElementById('btn-delte').addEventListener('click',function(){
+            const secreteInfo = document.getElementById('screte-info')
+            secreteInfo.style.display= 'none'
+        })
+    </script>
+</body>
+</html>
