@@ -7,5 +7,15 @@ document.getElementById('btn-login').addEventListener('click',function(event){
 
     // step 3 get phone number
     const phoneNumber = document.getElementById('phone-number').value;
-    console.log(phoneNumber)
+    const pinNumber = document.getElementById('pin-number').value;
+    console.log(phoneNumber, pinNumber)
+    // temporary way
+    // step4: validate the phone and pin
+    if(phoneNumber==='5' && pinNumber==='1234'){
+        console.log('loged in')
+        // step 5 : allow user
+        window.location.href = 'home.html'
+    } else {
+        alert('wrong phone or pin')
+    }
 })
