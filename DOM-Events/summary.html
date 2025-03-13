@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary </title>
+</head>
+<body>
+    <h1>Explore event summary</h1>
+    <button onclick="makeGreen()">Make Green</button>
+    <button id="make-yeallow">Make Yellow</button>
+    <br>
+    <input id="email" type="email">
+
+    <script>
+        // option1
+        function makeGreen(){
+            document.body.style.backgroundColor = 'green';
+        }
+        // option2
+        document.getElementById('make-yeallow').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'yellow'
+        })
+        document.getElementById('email').addEventListener('keyup',function(){
+            console.log(event.target.value);
+        })
+    </script>
+</body>
+</html>
